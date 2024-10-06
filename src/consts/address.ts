@@ -1,5 +1,8 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import { ethers } from 'ethers';
 import { getAddress, isAddress, parseEther } from 'viem';
+// import { getAddress, isAddress } from './address'
+
 /**
  * Shorten a wallet address.
  * @param {string} address - The full wallet address to shorten.
@@ -10,8 +13,6 @@ export class AddressFn {
   static formatBalance(balance: BigInt, decimals = 18) {
     return ethers.formatUnits(balance.toString(), decimals);
   }
-
-  // import { getAddress, isAddress } from './address'
 
   static isValidAddress(address: string) {
     // Need to catch because ethers' isAddress throws in some cases (bad checksum)
@@ -54,16 +55,19 @@ export class AddressFn {
     return capitalize ? AddressFn.capitalizeAddress(shortened) : shortened;
   }
 
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   static capitalizeAddress(address: string) {
     return '0x' + address.substring(2).toUpperCase();
   }
 
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   static areAddressesEqual(a1: string, a2: string) {
     AddressFn.validateAddress(a1, 'compare');
     AddressFn.validateAddress(a2, 'compare');
     return getAddress(a1) === getAddress(a2);
   }
 
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   static trimLeading0x(input: string) {
     return input.startsWith('0x') ? input.substring(2) : input;
   }
