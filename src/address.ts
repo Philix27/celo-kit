@@ -9,6 +9,7 @@ import { getAddress, isAddress, parseEther } from 'viem';
  * @param {number} [chars=4] - The number of characters to show at the start and end.
  * @returns {string} The shortened address.
  */
+
 export class AddressFn {
   static formatBalance(balance: BigInt, decimals = 18) {
     return ethers.formatUnits(balance.toString(), decimals);
