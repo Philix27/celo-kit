@@ -1,6 +1,6 @@
 {
-  "name": "celo-tk",
-  "version": "0.0.1",
+  "name": "celo-kit",
+  "version": "0.0.2",
   "description": "List of major ERC20 tokens on the Celo network. (name, logo, symbol, contract address)",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -24,7 +24,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Philix27/celo-tokens.git"
+    "url": "git+https://github.com/Philix27/celo-kit.git"
   },
   "license": "MIT",
   "author": {
@@ -43,9 +43,9 @@
     "erc20"
   ],
   "bugs": {
-    "url": "https://github.com/Philix27/celo-tokens/issues"
+    "url": "https://github.com/Philix27/celo-kit/issues"
   },
-  "homepage": "https://github.com/Philix27/celo-tokens#readme",
+  "homepage": "https://github.com/Philix27/celo-kit#readme",
   "dependencies": {},
   "devDependencies": {
     "tsup": "^8.3.0",

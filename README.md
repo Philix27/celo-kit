@@ -1,4 +1,4 @@
-# Celo Toolkit
+# Celo Kit
 
 A tool box for developers building on the Celo blockchain
 
@@ -12,7 +12,7 @@ A tool box for developers building on the Celo blockchain
 Using your package manager of choice
 
 ```
-npm i celo-tk
+npm i celo-kit
 ```
 
 
