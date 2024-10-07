@@ -10,7 +10,7 @@ export interface Token {
 }
 
 export interface TokenWithAddress {
-  address: Address;
+  address: string;
 }
 
 export enum TokenId {
@@ -125,7 +125,10 @@ export const Tokens: Record<TokenId, Token> = {
   PUSO,
 };
 
-export const TokenAddresses: Record<ChainId, Record<TokenId, Address>> = Object.freeze({
+export const TokenAddresses: Record<
+  ChainId,
+  Record<TokenId, string>
+> = Object.freeze({
   [ChainId.Alfajores]: {
     [TokenId.CELO]: '0xF194afDf50B03e69Bd7D057c1Aa9e10c9954E4C9',
     [TokenId.cUSD]: '0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1',
@@ -167,4 +170,16 @@ export const TokenAddresses: Record<ChainId, Record<TokenId, Address>> = Object.
   },
 });
 
-export const TokenList: Token[] = [CELO, cUSD, cEUR, cREAL, USDC, USDT, axlUSDC, axlEUROC, eXOF, cKES, PUSO];
+export const TokenList: Token[] = [
+  CELO,
+  cUSD,
+  cEUR,
+  cREAL,
+  USDC,
+  USDT,
+  axlUSDC,
+  axlEUROC,
+  eXOF,
+  cKES,
+  PUSO,
+];

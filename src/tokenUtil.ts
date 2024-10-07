@@ -1,4 +1,3 @@
-import { AddressFn } from './address';
 import { ChainId } from './chains';
 import { MentoExchanges } from './exchanges';
 import {
@@ -60,24 +59,24 @@ export class TokenFn {
     return Tokens[id as TokenId] || null;
   }
 
-  static getTokenAddress(id: TokenId, chainId: ChainId): Address {
+  static getTokenAddress(id: TokenId, chainId: ChainId): string {
     const addr = TokenAddresses[chainId][id];
     if (!addr)
       throw new Error(`No address found for token ${id} on chain ${chainId}`);
     return addr;
   }
 
-  static getTokenByAddress(address: Address): Token {
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-call
-    const idAddressTuples = Object.values(TokenAddresses)
-      .map(idToAddress => Object.entries(idToAddress))
-      .flat();
-    // This assumes no clashes btwn different tokens on diff chains
-    for (const [id, tokenAddr] of idAddressTuples) {
-      if (AddressFn.areAddressesEqual(address, tokenAddr)) {
-        return Tokens[id as TokenId];
-      }
-    }
-    throw new Error(`No token found for address ${address}`);
-  }
+  // static getTokenByAddress(address: string): Token {
+  //   // eslint-disable-next-line @typescript-eslint/no-unsafe-call
+  //   const idAddressTuples = Object.values(TokenAddresses)
+  //     .map(idToAddress => Object.entries(idToAddress))
+  //     .flat();
+  //   // This assumes no clashes btwn different tokens on diff chains
+  //   for (const [id, tokenAddr] of idAddressTuples) {
+  //     if (AddressFn.areAddressesEqual(address, tokenAddr)) {
+  //       return Tokens[id as TokenId];
+  //     }
+  //   }
+  //   throw new Error(`No token found for address ${address}`);
+  // }
 }

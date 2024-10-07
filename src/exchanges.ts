@@ -1,12 +1,12 @@
 import { ChainId } from './chains';
 
 export interface Exchange {
-  providerAddr: Address;
+  providerAddr: string;
   id: string;
-  assets: Address[];
+  assets: string[];
 }
 
-export const BrokerAddresses: Record<ChainId, Address> = {
+export const BrokerAddresses: Record<ChainId, string> = {
   [ChainId.Alfajores]: '0xD3Dff18E465bCa6241A244144765b4421Ac14D09',
   [ChainId.Baklava]: '0x6723749339e320E1EFcd9f1B0D997ecb45587208',
   [ChainId.Celo]: '0x777A8255cA72412f0d706dc03C9D1987306B4CaD',
