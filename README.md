@@ -37,3 +37,21 @@ const USDT: Token = Object.freeze({
 });
 
 ```
+
+## SVG icons for Tokens
+
+```ts
+import { Celo } from "celo-kit/icons"
+
+// use in a component
+function MyComponent() {
+
+  return (
+    <div>
+      <img src={Celo} className="size-[50px]" />
+    </div>
+  )
+}
+```
+
+Can be used in React, Svelte, Vue.js and any js library.
