@@ -119,3 +119,8 @@ dist
 
 # Compiled code
 lib/
+
+
+# folder  for testing
+ztest 
+/ztest 

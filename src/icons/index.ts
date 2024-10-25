@@ -1,0 +1,11 @@
+export * as Celo from './CELO.svg';
+export * as PUSO from './PUSO.svg';
+export * as USDC from './USDC.svg';
+export * as USDT from './USDT.svg';
+export * as axlEUROC from './axlEUROC.svg';
+export * as axlUSDC from './axlUSDC.svg';
+export * as cEUR from './cEUR.svg';
+export * as cKES from './cKES.svg';
+export * as cREAL from './cREAL.svg';
+export * as cUSD from './cUSD.svg';
+export * as eXOF from './eXOF.svg';
