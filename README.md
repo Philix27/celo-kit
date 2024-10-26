@@ -19,9 +19,9 @@ npm i celo-kit
 ## Example
 
 ```ts
+import { TokenList, type Token } from "celo-kit"
 // list of all tokens
-TokenList 
-
+ 
 // USDT token
 const USDT: Token = Object.freeze({
   id: TokenId.USDT,
